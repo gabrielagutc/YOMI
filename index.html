@@ -9,11 +9,12 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Lora&display=swap');
   </style>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header class="bg-primary text-white p-3">
     <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="m-0">YOMI</h1>
+      <h1 class="m-0" data-aos="fade-right">YOMI</h1>
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -35,18 +36,18 @@
   </header>
 
   <main class="container my-4">
-    <img src="./assets/img/header.jpg" alt="piedrasApiladas" class="img-fluid mb-4">
+    <img src="./assets/img/header.jpg" alt="piedrasApiladas" class="img-fluid mb-4" data-aos="zoom-in">
 
-    <section class="text-center mb-5">
+    <section class="text-center mb-5" data-aos="fade-up">
       <h4>El equipo YOMI</h4>
       <h2>Nosotros</h2>
       <p>En YOMI creemos que el bienestar comienza con un primer paso. Combinamos yoga, pilates y mindfulness para ayudarte a reconectar contigo mismo y construir una vida más consciente y equilibrada. Nuestra misión es acompañarte en tu camino de mejora personal, y nuestra visión es ser ese espacio donde cuerpo, mente y respiración se encuentran para transformar tu día a día.</p>
     </section>
 
     <section class="mb-5">
-      <h2 class="text-center">Sobre nuestras clases</h2>
+      <h2 class="text-center" data-aos="fade-up">Sobre nuestras clases</h2>
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up">
           <div class="card h-100">
             <img src="./assets/img/wunda.jpg" class="card-img-top" alt="wunda">
             <div class="card-body">
@@ -56,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card h-100">
             <img src="./assets/img/reformer.jpg" class="card-img-top" alt="reformer">
             <div class="card-body">
@@ -66,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card h-100">
             <img src="./assets/img/yoga.jpg" class="card-img-top" alt="yoga">
             <div class="card-body">
@@ -78,32 +79,34 @@
         </div>
       </div>
     </section>
+
     <!-- Sección sobre las sedes -->
-    <section class="mb-5">
+    <section class="mb-5" data-aos="fade-up">
       <h2 class="text-center">Conoce nuestras sedes</h2>
       <div class="row g-4">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-right">
           <div class="card">
             <img src="./assets/img/sedeA.jpg" class="card-img-top" alt="Sede A">
             <div class="card-body">
               <h5 class="card-title">Sede A</h5>
-              <p class="card-text">En nuestra sede norte encontrarás un espacio acogedor y totalmente equipado para tu bienestar. Contamos con duchas, consultas personalizadas, atención de fisioterapeuta y acompañamiento médico especializado. Todo lo que necesitas para cuidar tu cuerpo y mente en un solo lugar.</p>
+              <p class="card-text">En nuestra sede norte encontrarás un espacio acogedor y totalmente equipado para tu bienestar...</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <div class="card">
             <img src="./assets/img/sedeB.jpg" class="card-img-top" alt="Sede B">
             <div class="card-body">
               <h5 class="card-title">Sede B</h5>
-              <p class="card-text">Ubicada en el corazón de la ciudad, nuestra sede centro ofrece todos los servicios de YOMI a tu disposición: duchas, atención personalizada, y acompañamiento profesional con fisioterapeuta y médico. Un espacio pensado para tu comodidad y equilibrio diario.</p>
+              <p class="card-text">Ubicada en el corazón de la ciudad, nuestra sede centro ofrece todos los servicios de YOMI a tu disposición...</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Equipo -->
-    <section class="mb-5">
+    <section class="mb-5" data-aos="zoom-in">
       <h4>Equipo YOMI</h4>
       <h2>¿Quieres ser parte del equipo YOMI?</h2>
       <form class="row g-3">
@@ -121,11 +124,20 @@
       </form>
     </section>
   </main>
+
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <p class="m-0">Texto copyright 2025</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>

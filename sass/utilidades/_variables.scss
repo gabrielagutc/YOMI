@@ -1,0 +1,24 @@
+// C principales
+$colores-principales: (
+  azul-principal: #3A4FC8,
+  blanco-texto: #E5DFD8,
+  azul-link: #4DA4DD
+);
+
+// C secundarios
+$colores-secundarios: (
+  fondo-claro: #ffffff,
+  fondo-gris: #f7f7f7
+);
+
+// Botones
+$colores-botones: (
+  borde: map-get($colores-principales, azul-principal),
+  hover: map-get($colores-principales, azul-link)
+);
+
+// Tipografía
+$tipografias: (
+  principal: 'Red Hat Display, sans-serif',
+  secundaria: 'Lora, serif'
+);
