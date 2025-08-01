@@ -6,93 +6,62 @@
   <title>YOMI | Perfil</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../styles/styles.css">
+  <style>
+    :root {
+      --bs-primary: #CE574C;
+    }
+    .bg-primary {
+      background-color: var(--bs-primary) !important;
+    }
+    .btn-outline-primary {
+      --bs-btn-color: #CE574C;
+      --bs-btn-border-color: #CE574C;
+      --bs-btn-hover-bg: #CE574C;
+      --bs-btn-hover-border-color: #CE574C;
+      --bs-btn-hover-color: #fff;
+    }
+    .mini-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .table {
+      border: 1px solid #ddd;
+    }
+    .table th {
+      background-color: var(--bs-primary);
+      color: white;
+      text-align: center;
+    }
+    .table td {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header class="bg-primary text-white text-center p-3">
-    <h1>YOMI</h1>
-    <!-- Nav simple con enlaces -->
-    <nav>
-      <ul class="nav justify-content-center">
-        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="../pages/clases.html">Clases</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="../pages/planes.html">Planes</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="../pages/contacto.html">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link text-white active" href="#">Mi perfil</a></li>
-      </ul>
-    </nav>
+    <h1>Bienvenido a tu perfil</h1>
   </header>
-
-  <!-- Contenido del perfil -->
-  <div class="container my-4">
-    <h2>Bienvenida, Gabriela</h2>
-
-    <!-- Clases reservables -->
-    <section class="mb-4">
-      <h3>Clases</h3>
-      <h4>Fecha</h4>
-      <div class="row mb-3">
-        <div class="col">
-          <p>Hora</p>
-          <p>Clase</p>
-          <p>Profesora</p>
-          <button class="btn btn-outline-primary">Reservar</button>
-        </div>
-        <div class="col">
-          <p>Hora</p>
-          <p>Clase</p>
-          <p>Profesora</p>
-          <button class="btn btn-outline-primary">Reservar</button>
-        </div>
-        <div class="col">
-          <p>Hora</p>
-          <p>Clase</p>
-          <p>Profesora</p>
-          <button class="btn btn-outline-primary">Reservar</button>
-        </div>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">YOMI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./clases.html">Clases</a></li>
+          <li class="nav-item"><a class="nav-link" href="./planes.html">Planes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Mi perfil</a></li>
+        </ul>
       </div>
-      <a href="#">Ver todas</a>
-    </section>
+    </div>
+  </nav>
 
-    <!-- Progreso de clases -->
-    <section class="mb-4">
-      <h3>Histórico de clases</h3>
-      <label for="progresoClase">3/12:</label>
-      <progress id="progresoClase" max="120" value="30">30%</progress>
-    </section>
-
-    <!-- Tabla con historial -->
-    <section class="mb-4">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>8/04/2025</th>
-            <th>9/04/2025</th>
-            <th>10/04/2025</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Clase</th>
-            <td>Wunda</td>
-            <td>Yoga</td>
-            <td>Pilates</td>
-          </tr>
-          <tr>
-            <th>Profesor</th>
-            <td>Camila C</td>
-            <td>Gabriela A</td>
-            <td>Camila C</td>
-          </tr>
-          <tr>
-            <th>Duración</th>
-            <td>45min</td>
-            <td>45min</td>
-            <td>45min</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+   <div class="container my-4">
+    <h2>Bienvenida, Gabriela</h2>
 
     <!-- Card info personal -->
     <section class="mb-4">
@@ -111,15 +80,55 @@
       </div>
     </section>
 
-    <!-- Métricas -->
+  <main class="container mt-4">
     <section class="mb-5">
-      <h3>Métricas</h3>
-      <img src="../assets/img/metrica1.webp" class="img-fluid mb-2" alt="">
-      <img src="../assets/img/metrica2.webp" class="img-fluid" alt="">
-    </section>
+  <h2 class="text-center">Tus reservas</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered shadow-sm rounded">
+      <thead>
+        <tr class="text-white bg-primary">
+          <th scope="col">Clase</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Hora</th>
+          <th scope="col">Sede</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Yoga</td>
+          <td>2025-08-05</td>
+          <td>10:00 AM</td>
+          <td>Norte</td>
+        </tr>
+        <tr>
+          <td>Pilates</td>
+          <td>2025-08-07</td>
+          <td>6:00 PM</td>
+          <td>Centro</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</section>
 
-  <!-- Footer -->
+    <!-- Progreso de clases -->
+    <section class="mb-4">
+      <h3>Histórico de clases</h3>
+      <label for="progresoClase">3/12:</label>
+      <progress id="progresoClase" max="120" value="30">30%</progress>
+    </section>
+    <section class="mb-5">
+      <h2 class="text-center">Tus métricas</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 mb-3">
+          <img src="../assets/img/metrica1.webp" alt="Métrica actividad 1" class="img-fluid mini-img">
+        </div>
+        <div class="col-md-6 mb-3">
+          <img src="../assets/img/metrica2.webp" alt="Métrica actividad 2" class="img-fluid mini-img">
+        </div>
+      </div>
+    </section>
+
   <footer class="bg-dark text-white text-center py-3">
     <p class="m-0">Texto copyright 2025</p>
   </footer>

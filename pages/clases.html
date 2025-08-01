@@ -1,113 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YOMI | Clases</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/styles.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Lora&display=swap');
+    :root {
+      --bs-primary: #CE574C;
+    }
+    .bg-primary {
+      background-color: var(--bs-primary) !important;
+    }
+    .btn-outline-primary {
+      --bs-btn-color: #CE574C;
+      --bs-btn-border-color: #CE574C;
+      --bs-btn-hover-bg: #CE574C;
+      --bs-btn-hover-border-color: #CE574C;
+      --bs-btn-hover-color: #fff;
+    }
   </style>
 </head>
 <body>
-  <!-- navbar responsive -->
-  <header class="bg-primary text-white p-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="m-0">YOMI</h1>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-            <a href="clases.html" class="btn btn-primary" data-aos="fade-right">Ver clases</a>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link active" href="#">Clases</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/planes.html">Planes</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/iniciar-sesion.html">Registrarse</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/perfil.html">Iniciar sesión</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+  <header class="bg-primary text-white p-3 text-center">
+    <h1>Clases YOMI</h1>
   </header>
 
-  <main class="container my-4">
-    <img src="../assets/img/header.jpg" alt="piedrasApiladas" class="img-fluid mb-4">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">YOMI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Clases</a></li>
+          <li class="nav-item"><a class="nav-link" href="./planes.html">Planes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./iniciar-sesion.html">Iniciar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- card pilates -->
-    <section class="mb-5">
-      <h2 class="text-center mb-4">Clases</h2>
-      <div class="row g-4">
-        <!-- Card clase 1 -->
-        <div class="col-md-4" data-aos="fade-up">
+  <main class="container my-5">
+    <!-- Instructores -->
+    <section class="mb-5 text-center">
+      <h2>Nuestros instructores</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
           <div class="card h-100">
-            <img src="../assets/img/reformer.jpg" class="card-img-top" alt="clase reformer">
+            <a href="https://ibb.co/Zp0d6GHK">
+              <img src="https://i.ibb.co/0RxqjmBZ/profe1.jpg" class="card-img-top" alt="Instructora de pilates">
+            </a>
             <div class="card-body">
-              <h5 class="card-title">Pilates Reformer</h5>
-              <p class="card-text">Clases de pilates con máquina para fortalecer y mejorar tu postura.</p>
-              <a href="#" class="btn btn-outline-primary w-100">Reservar</a>
+              <h5 class="card-title">María</h5>
+              <p class="card-text">Especialista en pilates reformer con más de 5 años de experiencia.</p>
             </div>
           </div>
         </div>
-        <!-- Card wunda -->
-        <div class="col-md-4" data-aos="fade-up">
+        <div class="col-md-4">
           <div class="card h-100">
-            <img src="../assets/img/wunda.jpg" class="card-img-top" alt="clase wunda">
+            <a href="https://ibb.co/MkHSH5h5">
+              <img src="https://i.ibb.co/r2h0hftf/profe2.jpg" class="card-img-top" alt="Instructor de yoga masculino">
+            </a>
             <div class="card-body">
-              <h5 class="card-title">Wunda Chair</h5>
-              <p class="card-text">Ejercicios en silla para trabajar el core y equilibrio.</p>
-              <a href="#" class="btn btn-outline-primary w-100">Reservar</a>
+              <h5 class="card-title">Carlota</h5>
+              <p class="card-text">Instructora certificada en Hatha Yoga con énfasis en respiración consciente.</p>
             </div>
           </div>
         </div>
-        <!-- Card yoga -->
-        <div class="col-md-4" data-aos="fade-up">
+        <div class="col-md-4">
           <div class="card h-100">
-            <img src="../assets/img/yoga.jpg" class="card-img-top" alt="clase yoga">
+            <a href="https://ibb.co/PGrvw8jD">
+              <img src="https://i.ibb.co/s9gdyrRW/pexels-chevanon-317157.jpg" class="card-img-top" alt="Instructora de meditación">
+            </a>
             <div class="card-body">
-              <h5 class="card-title">Yoga</h5>
-              <p class="card-text">Conecta tu cuerpo y mente a través de posturas conscientes.</p>
-              <a href="#" class="btn btn-outline-primary w-100">Reservar</a>
+              <h5 class="card-title">Laura</h5>
+              <p class="card-text">Guía de mindfulness y meditación con formación en técnicas de relajación.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- profesores -->
-    <section class="mb-5">
-      <h3 class="text-center">El equipo</h3>
-      <h2 class="text-center mb-4">Conoce a los profes</h2>
-      <p class="text-center mb-4">Profesionales certificados en yoga, pilates y bienestar integral.</p>
-      <div class="row g-4">
-        <!-- Profesor 1 -->
-        <div class="col-md-4 text-center">
-          <img src="../assets/img/profe2.jpg" class="img-fluid rounded mb-2" alt="profesor Camila">
-          <h5>Camila, Pilates</h5>
-          <p>Texto explicativo</p>
+    <!-- Clases -->
+    <section class="text-center">
+      <h2>Conoce nuestras clases</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <a href="https://ibb.co/MFZhc3w">
+              <img src="https://i.ibb.co/pYbPf9V/reformer.jpg" class="card-img-top" alt="Clase de pilates reformer">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Reformer</h5>
+              <p class="card-text">Ejercicios en máquina para tonificar, mejorar la postura y aumentar la flexibilidad.</p>
+            </div>
+          </div>
         </div>
-        <!-- Profesor 2 -->
-        <div class="col-md-4 text-center">
-          <img src="../assets/img/profe3.jpg" class="img-fluid rounded mb-2" alt="profesor Gabriela">
-          <h5>Gabriela, Yoga</h5>
-          <p>Texto explicativo</p>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <a href="https://ibb.co/cS3f4YcR">
+              <img src="https://i.ibb.co/tTKjVLMn/yoga.jpg" class="card-img-top" alt="Clase de yoga restaurativo">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Yoga</h5>
+              <p class="card-text">Clases enfocadas en el equilibrio cuerpo-mente con técnicas de respiración.</p>
+            </div>
+          </div>
         </div>
-        <!-- Profesor 3 -->
-        <div class="col-md-4 text-center">
-          <img src="../assets/img/profe1.jpg" class="img-fluid rounded mb-2" alt="profesor Paulina">
-          <h5>Paulina, Wunda</h5>
-          <p>Texto explicativo</p>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <a href="https://ibb.co/N2zm7k47">
+              <img src="https://i.ibb.co/m57XSYxS/w.jpg" class="card-img-top" alt="Clase de wunda chair">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Wunda Chair</h5>
+              <p class="card-text">Sesiones con equipo especializado para fortalecer el core y mejorar el equilibrio.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <p class="m-0">Texto copyright 2025</p>
   </footer>

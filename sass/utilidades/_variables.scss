@@ -1,6 +1,6 @@
 // C principales
 $colores-principales: (
-  azul-principal: #3A4FC8,
+  azul-principal: #CE574C,
   blanco-texto: #E5DFD8,
   azul-link: #4DA4DD
 );
@@ -22,3 +22,146 @@ $tipografias: (
   principal: 'Red Hat Display, sans-serif',
   secundaria: 'Lora, serif'
 );
+
+@import 'variables';
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: map-get($tipografias, principal);
+  color: #020003;
+  background-color: map-get($colores-secundarios, fondo-claro);
+}
+
+h1 {
+  font-family: map-get($tipografias, secundaria);
+}
+
+/* Colores del header */
+header {
+  background-color: map-get($colores-principales, azul-principal);
+  color: map-get($colores-principales, blanco-texto);
+}
+
+a {
+  color: map-get($colores-principales, blanco-texto);
+  text-decoration: none;
+}
+
+a:hover {
+  color: map-get($colores-principales, azul-link);
+  text-decoration: underline;
+}
+
+.seleccionado {
+  color: map-get($colores-principales, azul-link) !important;
+}
+
+/* Nav bar */
+.nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Botones */
+button,
+.btn {
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary {
+  border-color: map-get($colores-botones, borde);
+  color: map-get($colores-botones, borde);
+}
+
+.btn-outline-primary:hover {
+  background-color: map-get($colores-botones, borde);
+  color: white !important;
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Tablas */
+.table th {
+  background-color: map-get($colores-principales, azul-link);
+  color: white;
+}
+
+/* Progreso */
+progress {
+  width: 100%;
+  height: 20px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Animaciones con AOS */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .nav {
+    justify-content: flex-start;
+    padding: 1.5rem 2rem;
+    gap: 2rem;
+  }
+  .cards-container {
+    max-width: 960px;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  .card {
+    width: 320px;
+  }
+}

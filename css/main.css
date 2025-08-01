@@ -1,115 +1,44 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bs-primary: #CE574C;
 }
 
-body {
-  font-family: 'Red Hat Display', sans-serif;
-  color: #020003;
+.bg-primary {
+  background-color: #CE574C !important;
 }
 
-h1 {
-  font-family: 'Lora', serif;
+.btn-outline-primary {
+  --bs-btn-color: #CE574C;
+  --bs-btn-border-color: #CE574C;
+  --bs-btn-hover-bg: #CE574C;
+  --bs-btn-hover-border-color: #CE574C;
+  --bs-btn-hover-color: #fff;
 }
 
-/* Colores */
-header {
-  background-color: #3A4FC8;
-  color: #E5DFD8;
+.mini-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-a {
-  color: #E5DFD8;
-  text-decoration: none;
+[data-aos] {
+  transition-duration: 0.75s;
+  transition-property: opacity, transform;
 }
 
-a:hover {
-  color: #4DA4DD;
-  text-decoration: underline;
-}
-
-.seleccionado {
-  color: #4DA4DD !important;
-}
-
-/* nav */
-.nav {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-/* Botones */
-button,
-.btn {
-  font-weight: 500;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-outline-primary:hover {
-  background-color: #3A4FC8;
-  color: white !important;
-}
-
-/* Cards */
-.card {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* Tabla */
-.table th {
-  background-color: #4DA4DD;
-  color: white;
-}
-
-/* Progreso */
-progress {
-  width: 100%;
-  height: 20px;
-}
-
-/* Footer */
 footer {
   font-size: 0.9rem;
 }
 
-/* Responsive mobile */
+label {
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
-  h2 {
-    font-size: 1.5rem;
-  }
-  .card {
-    margin-bottom: 1rem;
-  }
-/* Responsive desktop */
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  .nav {
-    justify-content: flex-start;
-    padding: 1.5rem 2rem;
-    gap: 2rem;
-  }
-  .cards-container {
-    max-width: 960px;
-    gap: 2rem;
-    justify-content: flex-start;
-  }
-  .card {
-    width: 320px;
-  }
+}
